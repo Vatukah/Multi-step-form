@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Sidebar start -->
+      <div id="sideBar">
+        <div id="step1" class="step">
+          <span> 1</span>
+          <div class="stepW">
+            <p class="s">STEP 1</p>
+            <p>YOUR INFO</p>
+          </div>
+        </div>
+        <div id="step2" class="step">
+          <span> 2</span>
+          <div class="stepW">
+            <p class="s">STEP 2</p>
+            <p>SELECT PLAN</p>
+          </div>
+        </div>
+        <div id="step3" class="step">
+          <span> 3</span>
+          <div class="stepW">
+            <p class="s">STEP 3</p>
+            <p>ADD-ONS</p>
+          </div>
+        </div>
+        <div id="step4" class="step">
+          <span> 4</span>
+          <div class="stepW">
+            <p class="s">STEP 4</p>
+            <p>SUMMARY</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+      <div id="main">
+        <!-- Step 1 start -->
+
+        <div id="main1" class="mains">
+          <h1>Personal info</h1>
+          <p  class="afterH1_para">Please provide your name, email address, and phone number.</p>
+          <form action="">
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              name="name"
+              placeholder="e.g. Stephen King"
+            /><br />
+            <label for="emailAdress">Email Address</label><br />
+            <input
+              type="email"
+              name="emailAdress"
+              id=""
+              placeholder="e.g. stephenking@lorem.com"
+            /><br />
+            <label for="Phone.no">Phone Number</label><br />
+           <div id="numberContainer"><input 
+              type="number"
+              name="Phone.no"
+              id="inputNumber"
+              
+              placeholder="e.g. +1 234 567 890 "
+            /><div id="required">This field is required</div></div> 
+            
+          </form>
+        </div>
+        <div id="submitSec">
+          <button id="goBack">Go Back</button>
+          <input type="submit" value=" Next Step" id="next" />
+        </div>
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+        <div id="main2" class="mains">
+          <h1>Select your plan</h1>
+          <p  class="afterH1_para">You have the option of monthly or yearly billing.</p>
+          <div id="options">
+            <div id="opt1" class="plan_opt">
+              <img src="assets\images\icon-arcade.svg" alt="Arcade" />
+              <span
+                ><p>
+                  <p class="planName">
+                  Arcade</p> 
+                  <span class="plan_Amt"> $9/mo</span>
+                </p>
+              <p class="free">2 months Free</p></span
+              >
+            </div>
+            <div id="opt2"  class="plan_opt">
+              <img src="assets\images\icon-advanced.svg" alt="Advanced" />
+              <span
+                ><p>
+                  <p class="planName">
+                  Advanced </p>
+                  <span class="plan_Amt">$12/mo</span>
+                </p>
+              <p class="free">2 months Free</p></span
+              >
+            </div>
+            <div id="opt3"  class="plan_opt">
+              <img src="assets\images\icon-pro.svg" alt="Pro" />
+              <span
+                ><p>
+                  <p class="planName">
+                  Pro </p>
+                  <span class="plan_Amt"> $15/mo</span>
+                </p>
+              <p class="free">2 months Free</p></span
+              >
+            </div>
+          </div>
+          <div id="monthAndYear">
+            <span>Monthly</span>
+            <div id="toggle"><div id="btn"></div></div>
+            <span> Yearly</span>
+          </div>
+        </div>
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <div id="main3" class="mains">
+          <h1>Pick add-ons</h1>
+          <p  class="afterH1_para">Add-ons help enhance your gaming experience.</p>
+          <div class="checkOpt">
+            <input
+              type="checkbox"
+              name="addOns"
+              id="addOns"
+              value="Online service"
+              
+            />
+            <p>
+              Online service <br />
+              Access to multiplayer games
+            </p>
+            <span class="addOn_Amt">+$1/mo</span>
+          </div>
+          <div class="checkOpt">
+            <input type="checkbox" name="addOns" id="addOns" value=" Larger storage"  data=""/>
+            <p>
+              Larger storage <br />
+              Extra 1TB of cloud save
+            </p>
+            <span class="addOn_Amt"> +$2/mo</span>
+          </div>
+          <div class="checkOpt">
+            <input type="checkbox" name="addOns" id="addOns" value="Customizable" />
+            <p>
+              Customizable Profile <br />
+              Custom theme on your profile
+            </p>
+            <span class="addOn_Amt">+$2/mo</span>
+          </div>
+        </div>
+        <!-- Step 3 end -->
+        <!-- Step 4 start -->
+        <div id="main4" class="mains">
+          <h1>Finishing up</h1>
+          <p class="afterH1_para">Double-check everything looks OK before confirming.</p>
+          <div id="selected">
+            <div id="S_plan">
+              <p id="planHead">
+                <span></span> <br /><a href="#">change</a>
+              </p>
+              <span id="S_Amt_plan"></span>
+            </div>
+            
+            
+        </div>
+          
+         
+
+          <!-- Dynamically add subscription and add-on selections here -->
+
+          <div id="total">
+            <p>Total <span id="T_mORy">(per month)</span></p>
+            <span class="totalAmt"></span>
+          </div>
+        </div>
+        <!-- Step 4 end -->
+
+        <!-- Step 5 start -->
+        <div id="main5" class="mains">
+          <img src="assets\images\icon-thank-you.svg" alt="thank you" />
+          <h1>Thank you!</h1>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </p>
+        </div>
+        <!-- Step 5 end -->
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.instagram.com/_vatukah">Anupam kumar</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
